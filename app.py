@@ -402,8 +402,8 @@ def vectorize(x):
     # Load Word2vec pkl file
     vdoc = [word2vec.wv[word] for word in x]
     doc2vec = np.sum(vdoc, axis=0)
-    if doc2vec.size < 400:
-        doc2vec = np.zeros(400)
+    if doc2vec.size < 300:
+        doc2vec = np.zeros(300)
     return doc2vec
 
 
